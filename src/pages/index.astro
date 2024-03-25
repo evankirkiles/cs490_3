@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<ul>
+			{[...new Array(20)].map((_, i) => <li>
+				<a href={`/test/${i + 1}`}>Page {i + 1}</a></li>)}
+		</ul>
+	</main>
+</Layout>
